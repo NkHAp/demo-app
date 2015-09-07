@@ -22,10 +22,8 @@
                 redirecturl = 'http://'+sn;
 				app.initialize();
                 //document.location.href=redirecturl;
-        };
-
-		
-var app = {
+				
+				var app = {
 	
     // Application Constructor
     initialize: function() {
@@ -45,15 +43,14 @@ var app = {
     onDeviceReady: function() {
 		
         app.receivedEvent('deviceready');
-		    url = document.getElementById('server').value;
-			alert(url);
+		    redirecturl = document.getElementById('server').value;
+			alert("device ready:"+redirecturl);
 		sessionStorage.openedIAB = 1;		
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		alert(redirecturl);
-		var ref = cordova.InAppBrowser.open(redirecturl, '_blank', 'location=no,hidden=yes,zoom=no');
-		   var img = document.createElement("img");
+		alert("Before inapp:"+redirecturl);
+		var ref = cordova.InAppBrowser.open(redirecturl, '_blank', 'location=no,hidden=yes,zoom=no');		  
 		ref.addEventListener("loadstop", function() {
 			ref.show();
 				//alert("loading stop");
@@ -81,3 +78,7 @@ var app = {
     }
 	
 };
+        };
+
+		
+
