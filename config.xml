@@ -33,7 +33,7 @@
     <activity android:launchMode="singleTop" />
 </gap:config-file>
 
-  <icon src="icon.png"/>
+  
   <icon src="www/res/icon/logo_36.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/logo_48.png" gap:platform="android" gap:qualifier="mdpi"/>
   <icon src="www/res/icon/logo_72.png" gap:platform="android" gap:qualifier="hdpi"/>

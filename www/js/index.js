@@ -46,12 +46,12 @@ var app = {
 		
         app.receivedEvent('deviceready');
 		    redirecturl = document.getElementById('server').value;
-			alert("device ready:"+redirecturl);
+			
 		sessionStorage.openedIAB = 1;		
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		alert("Before inapp:"+redirecturl);
+	
 		var ref = cordova.InAppBrowser.open("home.html", '_blank', 'location=no,hidden=yes,zoom=no');		  
 		ref.addEventListener("loadstop", function() {
 			ref.show();
