@@ -20,6 +20,7 @@
  function gotoserver() {
                 sn = document.getElementById('server').value;
                 redirecturl = 'http://'+sn;
+				app.initialize();
                 //document.location.href=redirecturl;
         };
 
