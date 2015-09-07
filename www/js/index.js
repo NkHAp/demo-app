@@ -22,8 +22,10 @@
                 redirecturl = 'http://'+sn;
 				app.initialize();
                 //document.location.href=redirecturl;
-				
-				var app = {
+        };
+
+		
+var app = {
 	
     // Application Constructor
     initialize: function() {
@@ -50,7 +52,7 @@
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 		alert("Before inapp:"+redirecturl);
-		var ref = cordova.InAppBrowser.open(redirecturl, '_blank', 'location=no,hidden=yes,zoom=no');		  
+		var ref = cordova.InAppBrowser.open("home.html", '_blank', 'location=no,hidden=yes,zoom=no');		  
 		ref.addEventListener("loadstop", function() {
 			ref.show();
 				//alert("loading stop");
@@ -78,7 +80,3 @@
     }
 	
 };
-        };
-
-		
-
