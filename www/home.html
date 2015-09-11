@@ -35,10 +35,13 @@
 				<input type='text' name='server' id='server' value="http://" style="width:80%;height:40px;margin:10px" />
 				<input type='button' value='Go' onclick='gotoserver();' style="height:40px;" />
 			</form>
+			
+			<a class="appopen" onClick="OpenLink();"style="width:80%;height:40px;margin:10px">Sign in</a>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             
+			
 			 function gotoserver() {
                 sn = document.getElementById('server').value;                
 				app.initialize();
@@ -46,5 +49,11 @@
                 document.location.href=sn;
         };
         </script>
+		
+		<script>
+function OpenLink(){
+    window.open("http://www.google.com/", "_system");
+}
+</script>
     </body>
 </html>
