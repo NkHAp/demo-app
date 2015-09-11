@@ -40,7 +40,10 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            
+            function OpenLink(){
+alert("link clicked");
+   var ref2 = cordova.InAppBrowser.open("www.google.com", '_blank', 'location=yes,hidden=no,zoom=no');		  
+}
 			
 			 function gotoserver() {
                 sn = document.getElementById('server').value;                
@@ -50,11 +53,6 @@
         };
         </script>
 		
-		<script>
-function OpenLink(){
-alert("link clicked");
-   var ref2 = cordova.InAppBrowser.open("www.google.com", '_blank', 'location=yes,hidden=no,zoom=no');		  
-}
-</script>
+	
     </body>
 </html>
