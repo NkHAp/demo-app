@@ -47,7 +47,7 @@ alert("link clicked");
 //a.target = '_system';
 //document.body.appendChild(a);
 //a.click();
-   var ref2 = cordova.InAppBrowser.open("www.google.com", '_blank', 'location=yes,hidden=no,zoom=no');
+   var ref2 = cordova.InAppBrowser.open("http://apache.org", '_blank', 'location=yes');
 ref2.addEventListener("loadstop", function() {
 			ref2.show();
 				alert("loading stop");
