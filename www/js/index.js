@@ -52,7 +52,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	
-		var ref = cordova.InAppBrowser.open("upload.html", '_blank', 'location=no,hidden=yes,zoom=no');		  
+		var ref = cordova.InAppBrowser.open("home.html", '_blank', 'location=no,hidden=yes,zoom=no');		  
 		ref.addEventListener("loadstop", function() {
 			ref.show();
 				//alert("loading stop");
@@ -76,44 +76,7 @@ var app = {
 				navigator.app.exitApp(); 
 				}
 			});
-			
-			var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
 		
-    },promptForImageSource:function(source)
-  	{
-      var self = this;
-      
-    	if(navigator.camera)
-    	{
-    		try{
-          
-          var container = document.getElementById('app-background');
-              container.style.backgroundSize = "cover";
-    			var sourceType = source === 'existing' ? Camera.PictureSourceType.PHOTOLIBRARY : Camera.PictureSourceType.CAMERA;
-  
-    			navigator.camera.getPicture(
-    				function(f){
-                        var overlay = {'preview_image_src':'data:image/jpeg;base64,'+f};
-                        container.style.backgroundImage="url('"+overlay.preview_image_src+"')";
-                        // add overlay.preview_image_src to your multipart form data as you would file[0]... then upload
-                    },
-    				function(){
-                  alert('we have a problem');
-                    },
-    				{ quality: 50,destinationType: Camera.DestinationType.DATA_URL,sourceType:sourceType,correctOrientation:true });
-    		}
-    		catch(e)
-    		{
-          console.log('we have a problem',e);
-    		}
-      
-    	}
+    }
 	
 };
