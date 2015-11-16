@@ -32,6 +32,7 @@
   <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
   <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
   <gap:plugin name="cordova-plugin-device" source="npm"/>
+   <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
   <gap:config-file platform="android" parent="/manifest/application">
     <activity android:launchMode="singleTop" />
 </gap:config-file>
@@ -58,6 +59,7 @@
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
+  <allow-navigation href="*" />
   <feature name="App">
     <param name="android-package" value="org.apache.cordova.App" />
 </feature>
